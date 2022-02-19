@@ -1,0 +1,54 @@
+
+1. npx create-react-app routing-app
+2. npm i yarn
+3. npm i react-router-dom
+
+App.js
+4. line 9: 
+  <BrowserRouter>
+    <> 
+    </>
+  </BrowserRouter
+5. inside of empty tags. 
+  <nav> 
+    <NavLink to='/routename'>Route Name </NavLink>
+    <NavLink  to='/'>Home</NavLink>
+    <NavLink  to='/news'>News</NavLink>
+    <NavLink  to='/weather'>Weather</NavLink>
+    <NavLink  to='/sports'>Sports</NavLink>
+  <nav>
+
+6. create components folder within src
+7. create directories for each of the routes
+-src
+--components
+---home
+----Home.js
+----home.css
+---news
+----News.js
+----news.css
+---weather
+----weather.js
+----weather.css
+---sports
+----Sports.js
+----sports.css
+
+8. In the components,
+export default function Home () {
+  return(
+    <div className="home">
+      <h1>Welcome Home</h1>
+    </div>
+  )
+}
+
+9. Import the component to the App.js
+
+10. Changed where we place BrowserRoute App.js > index.js
+Index.js
+import { BrowserRouter } from 'react-router-dom'
+    <BrowserRouter>
+     <App />
+    </BrowserRouter>
